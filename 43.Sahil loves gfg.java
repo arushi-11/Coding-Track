@@ -1,3 +1,6 @@
+// https://practice.geeksforgeeks.org/contest-problem/sahil-loves-gfg/0/
+
+
 package com.company;
 import java.util.Scanner;
 
@@ -46,12 +49,12 @@ class KMP_String_Matching {
                 arr[i] = len;
                 i++;
             }
-            else // (pat[i] != pat[len]) 
+            else // (pat[i] != pat[len])
             {
                 if (len != 0) {
                     len = arr[len - 1];
                 }
-                else // if (len == 0) 
+                else // if (len == 0)
                 {
                     arr[i] = len;
                     i++;
@@ -62,25 +65,25 @@ class KMP_String_Matching {
 
     public static void main(String args[])
     {
-       Scanner sc = new Scanner(System.in); 
+       Scanner sc = new Scanner(System.in);
        //System.out.println("Enter the String : ");
-       
+
        //for test cases!
        int t = sc.nextInt();
        for(int i =0; i<t; i++){
        String txt = sc.nextLine();
-       
+
        //System.out.println("Enter the pattern you want to Search!");
        String pat = sc.nextLine();
-       
-     
+
+
       //int s,j;
       //char m[] = txt.toCharArray();
-      //char p[] = pat.toCharArray(); 
-       
+      //char p[] = pat.toCharArray();
+
       //Integer limit = m.length - p.length;
-      
+
     new KMP_String_Matching().KMPSearch(pat, txt);
     }
-} 
+}
 }
